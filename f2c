@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <cs50.h>
+
+int main(void)
+{
+    printf("Please type the Temperature in Fahrenheidt degrees:  ");
+    float f = GetFloat();
+    
+    float c = 5.0 / 9.0  *(f - 32.0);
+    printf("A temperatura correspondente em Centigrados é %.0f \n", c );
+}
+
+/*
+PS1: a razao pela qual os valores da formula de conversao estao com "5.0", "9.0" e 
+"32.0" é que em C se vc divide um int/int o resultado vai ser um int
+e 5/9 = 0.55 que o C vai dar resultado como 0 jogando fora o que tem depois da virgula
+entao sempre que tem float e int colocar ".0" em todos numeros para nao parece que
+seja um int
+
+PS2: no placeholder value para float %f da pra botar .n entre o % e o f, sendo 
+n o numero de casas depois da virgula desejadas ex %.4f significa 4 casas depois
+da virgula. no caso acima eu deixei 0 casas depois da virgula hahaha
+*/
